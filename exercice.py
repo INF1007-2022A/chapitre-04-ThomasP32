@@ -2,29 +2,46 @@
 # -*- coding: utf-8 -*-
 
 #Vérifier si le nombre de caractères d’une chaîne de caractères est pair
+from re import I
+
+
 def is_even_len(string: str) -> bool:
     return len(string) % 2 == 0            
-     
-
-            
-pass
 
 
 
+#Supprimer le 3ème caractère d’une chaîne de caractères
 def remove_third_char(string: str) -> str:
-    pass
+    return string[:2] + string[3:]    
 
 
+#Remplacer un caractère d’une chaîne de caractère par un autre
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    pass
+    for i in range(len(string)):
+        if string[i] == old_char:
+            return string[:i] + new_char + string[i+1:]
 
 
+#Renvoyer le nombre d’occurrences d’un caractère dans une chaîne de caractères, sans utiliser de fonctions avancées
 def get_number_of_char(string: str, char: str) -> int:
-    pass
+    number_char = 0
+    for i in string:
+        if i == char:
+            number_char += 1
+    
+    return number_char
 
 
+#Rechercher le nombre d’occurrences d'un mot dans une phrase donnée
 def get_number_of_words(sentence: str, word: str) -> int:
-    pass
+    number_of_words = 0
+    sentence1 = sentence.split()
+    for i in sentence1:
+        if i == word:
+            number_of_words += 1
+
+    return number_of_words
+
 
 
 def main() -> None:
