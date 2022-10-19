@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-
+#Vérifier si le nombre de caractères d’une chaîne de caractères est pair
 def is_even_len(string: str) -> bool:
-    pass
+    return len(string) % 2 == 0            
+     
+
+            
+pass
+
 
 
 def remove_third_char(string: str) -> str:
